@@ -19,13 +19,36 @@ namespace Calculator
                 char oper;
 
                 Console.WriteLine("Введите первое число:");
-                a = Convert.ToDouble(Console.ReadLine());
+                //a = Convert.ToDouble(Console.ReadLine());
+                while (true)
+                {
+                    if (double.TryParse(Console.ReadLine(), out a))
+                    {
+                        Console.WriteLine("Число принято.\n");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Введен символ!");
+                    }
+                }
 
                 Console.WriteLine("Введите оператор:");
                 oper = Convert.ToChar(Console.ReadLine());
 
                 Console.WriteLine("Введите второе число:");
-                b = Convert.ToDouble(Console.ReadLine());
+                while (true)
+                {
+                    if (double.TryParse(Console.ReadLine(), out b))
+                    {
+                        Console.WriteLine("Число принято.\n");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Введен символ!");
+                    }
+                }
 
                 if (oper == '+')
                 {
