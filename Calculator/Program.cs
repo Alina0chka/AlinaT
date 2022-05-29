@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Calculator
 {
     class Program
@@ -49,6 +50,11 @@ namespace Calculator
                 {
                     total = a / b;
                     Console.WriteLine("Деление " + a + " на " + b + " равно " + total + ".");
+                }
+                else if (oper == '^')
+                {
+                    total = Math.Pow(a, b);
+                    Console.WriteLine("Возведение в степень " + b + " числа " + a + " равно " + total + ".");
                 }
                 else
                 {
